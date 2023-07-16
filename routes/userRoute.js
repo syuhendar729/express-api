@@ -3,7 +3,7 @@ module.exports = app => {
 	const r = require('express').Router()
 
 	r.get('/', users.showAll)
-	r.get('/:id', users.detail)
+	r.get('/:username', users.detail)
 	r.post('/', users.create)
 	r.put('/:id', users.update)
 	r.delete('/:id', users.delete)

@@ -9,8 +9,8 @@ exports.showAll = (req, res) => {
 }
 
 exports.detail = (req, res) => {
-	const id = req.params.id
-	Users.findById(id)
+	const username = req.params.username
+	Users.findOne({namaPengguna: username})
 		.then(data => res.send(data))
 		.catch(err => res.status(500).send({message: err.message}))
 }
